@@ -1,6 +1,6 @@
 [build]
 builder = "nixpacks"
-buildCommand = "pnpm install && pnpm run build"
+buildCommand = "npm install -g pnpm@11.1.2 && pnpm install && pnpm run build"
 
 [build.nixpacksPlan.variables]
 NIXPACKS_NODE_VERSION = "24"
