@@ -2,10 +2,10 @@
   "name": "workspace",
   "version": "0.0.0",
   "license": "MIT",
-  "packageManager": "pnpm@11.1.2",
+  "packageManager": "pnpm@9.15.9",
   "engines": {
     "node": ">=20.0.0",
-    "pnpm": ">=11.0.0"
+    "pnpm": ">=9.0.0"
   },
   "scripts": {
     "preinstall": "rm -f package-lock.json yarn.lock",
