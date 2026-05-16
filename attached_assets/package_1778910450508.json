@@ -1,0 +1,24 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.1.2",
+  "license": "MIT",
+
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+
+  "scripts": {
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck",
+    "start": "pnpm --filter @workspace/api-server start"
+  },
+
+  "private": true,
+
+  "devDependencies": {
+    "prettier": "^3.8.3",
+    "typescript": "~5.9.3"
+  }
+}
