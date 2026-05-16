@@ -1,0 +1,9 @@
+[build]
+builder = "nixpacks"
+buildCommand = "pnpm install && pnpm run build"
+
+[deploy]
+startCommand = "pnpm run start"
+healthcheckPath = "/api/healthz"
+restartPolicyType = "on_failure"
+restartPolicyMaxRetries = 3
