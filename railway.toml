@@ -1,6 +1,7 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install -g pnpm@11.1.2 && pnpm install && pnpm run build"
+installCommand = "npm install -g pnpm@11.1.2 && pnpm install --frozen-lockfile"
+buildCommand = "pnpm run build"
 
 [build.nixpacksPlan.variables]
 NIXPACKS_NODE_VERSION = "24"
