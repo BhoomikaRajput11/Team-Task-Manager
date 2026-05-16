@@ -2,6 +2,9 @@
 builder = "nixpacks"
 buildCommand = "pnpm install && pnpm run build"
 
+[build.nixpacksPlan.variables]
+NIXPACKS_NODE_VERSION = "24"
+
 [deploy]
 startCommand = "pnpm run start"
 healthcheckPath = "/api/healthz"
